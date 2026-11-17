@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# VERDE
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Pemutar musik open source berbentuk PWA: mobile-first, bisa dipasang ke layar utama Android dan iOS, dan nyaman di desktop. Tampilan gelap dengan sentuhan kaca (glass) dan hijau emerald. VERDE adalah nama kerja sementara.
 
-Currently, two official plugins are available:
+## Status
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dalam pengembangan awal. Belum ada versi yang bisa dipakai.
 
-## React Compiler
+## Prinsip
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Audio hanya dari sumber legal: Audius, Jamendo, file lokal milik pengguna, dan server pribadi (Subsonic, di rilis berikutnya).
+- Tidak mengambil, meng-stream, atau me-rip audio dari Spotify, YouTube, Apple Music, atau layanan berlisensi lain.
+- Impor Spotify hanya metadata playlist, lalu dicocokkan ke sumber yang tersedia.
+- Local-first: semua data tersimpan di perangkat, tanpa pelacak dan tanpa analitik pihak ketiga.
 
-## Expanding the Oxlint configuration
+## Pengembangan
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Prasyarat: Node.js 20.19 atau lebih baru, dan npm.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- `npm install` untuk memasang dependensi
+- `npm run dev` untuk menjalankan server pengembangan
+- `npm run test` untuk tes unit (Vitest)
+- `npm run test:e2e` untuk tes antarmuka (Playwright)
+- `npm run lint` dan `npm run format:check` untuk memeriksa kode
+- `npm run build` untuk build produksi
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Lisensi
+
+GNU General Public License v3.0. Lihat berkas `LICENSE`.
