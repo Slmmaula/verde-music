@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router'
+import AppShell from './app/AppShell'
 import ComingSoon from './app/ComingSoon'
 import NotFound from './app/NotFound'
 import HomeScreen from './features/home/HomeScreen'
@@ -11,11 +12,13 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route index element={<HomeScreen />} />
-        <Route path="search" element={<SearchScreen />} />
-        <Route path="library" element={<LibraryScreen />} />
-        <Route path="settings" element={<SettingsScreen />} />
-        <Route path="*" element={<NotFound />} />
+        <Route element={<AppShell />}>
+          <Route index element={<HomeScreen />} />
+          <Route path="search" element={<SearchScreen />} />
+          <Route path="library" element={<LibraryScreen />} />
+          <Route path="settings" element={<SettingsScreen />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
