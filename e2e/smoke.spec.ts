@@ -1,6 +1,8 @@
 import { expect, test } from '@playwright/test'
 
-test('app loads', async ({ page }) => {
+test('coming soon page shows the logo, heading and privacy link', async ({ page }) => {
   await page.goto('/')
-  await expect(page.locator('#root')).not.toBeEmpty()
+  await expect(page.getByRole('img', { name: 'VERDE' })).toBeVisible()
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Segera')
+  await expect(page.getByRole('link', { name: 'Kebijakan Privasi' })).toBeVisible()
 })

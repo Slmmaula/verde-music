@@ -27,3 +27,7 @@ Prasyarat: Node.js 20.19 atau lebih baru, dan npm.
 ## Lisensi
 
 GNU General Public License v3.0. Lihat berkas `LICENSE`.
+
+## Merek dan logo
+
+Kode sumber VERDE dilisensikan di bawah GPL-3.0. Nama "VERDE" dan logonya adalah identitas proyek dan tidak ikut dilisensikan di bawah GPL: jangan dipakai dengan cara yang menyiratkan dukungan atau afiliasi resmi tanpa izin. Fork dipersilakan, tetapi sebaiknya memakai nama dan logo sendiri.
